@@ -1,6 +1,11 @@
-function ReadingList(){
+function ReadingList() {
 
-    return <p>reading list</p>
+    return (
+        <div className="gridRight">
+            <p>reading list</p>
+
+        </div>
+    )
 }
 
 export default ReadingList

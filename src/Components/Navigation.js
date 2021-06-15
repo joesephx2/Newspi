@@ -1,16 +1,15 @@
-import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import ReadingList from './ReadingList';
 import Home from './Home';
 
 
 function Navigation() {
-
+    console.log('Navigation()');
     const navBar = (
         <Router>
             <div className="nav-bar">
                 <ul>
-                    <Link to='/home' ><li><img src={'../rooster.png'} /></li></Link>
-                    <li>--navigation--</li>
+                    <Link to='/home' ><img src={'../rooster.png'} alt="a rooster" /></Link>
                     <Link to='/home' ><li>Home</li></Link>
                     <Link to='/readinglist'><li>Reading List</li></Link>
                 </ul>

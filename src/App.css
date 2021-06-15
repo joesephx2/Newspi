@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-auto-columns: 10vw;
+  height: 100vh;
+  background-color: #EFEFEF;
+  color: #A9A9A9;
 }
 
 .App-logo {
@@ -39,11 +44,56 @@
 
 .nav-bar{
   background-color: #A9A9A9;
+  border-right: 1px solid #9b9b9b;
   color:#EFEFEF ;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .nav-bar li{
   list-style: none;
+}
+
+.nav-bar li:hover{
+  background-color: #EFEFEF;
+  color:#A9A9A9 ;
+}
+
+.nav-bar a {
+  color:#EFEFEF ;
+  text-decoration: none;
+}
+
+.gridRight{
+  grid-column-start: 3;
+  grid-column-end: 10;
+  margin: 0;
+}
+
+.gridRight li{
+  list-style: none;
+}
+
+.newsTitles{
+  text-align: center;
+}
+
+.newsTitles li{
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.newsTitles li:hover{
+  border: solid 1px #A9A9A9 ;
+  background-color: #fdfdfd;
+}
+
+.newsTitles input{
+  float: right;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* 
