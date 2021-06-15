@@ -62,11 +62,17 @@
 .nav-bar a {
   color:#EFEFEF ;
   text-decoration: none;
+
+}
+
+.nav-bar ul {
+  align-self: start;
+  position: sticky;
 }
 
 .gridRight{
   grid-column-start: 3;
-  grid-column-end: 10;
+  grid-column-end: 9;
   margin: 0;
 }
 
@@ -76,11 +82,17 @@
 
 .newsTitles{
   text-align: center;
+  overflow-y: scroll;
+  width: 80vw;
+  height: 100vh;
 }
 
 .newsTitles li{
+  border: solid 1px #A9A9A9 ;
   padding: 1em;
   border-radius: 5px;
+  margin: .5em;
+  margin-right: 30vw;
 }
 
 .newsTitles li:hover{
@@ -94,6 +106,34 @@
 
 img {
   max-width: 100%;
+}
+
+.newsCard{
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-start;
+}
+
+.newsCard h1{
+  border-bottom: solid 1px #A9A9A9 ;
+  flex-basis: 100%;
+  order: 1;
+}
+
+.newsCard input{
+  order: 3;
+}
+
+.newsCard img{
+  max-width: 25%;
+  border-radius: 5px;
+  order: -1;
+  flex-basis: 25%;
+}
+
+.newsCard p{
+  flex-basis: 70%;
+  padding: 1em;
 }
 
 /* 

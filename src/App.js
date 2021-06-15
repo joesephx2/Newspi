@@ -9,11 +9,12 @@ function App() {
 
 
   const [newsData, setState] = useState([])
+  const [userNews, setUserNews] = useState([])
 
 
   useEffect(async () => {
 
-    await fetch("https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/TrendingNewsAPI?pageNumber=1&pageSize=40&withThumbnails=false&location=us", {
+    await fetch("https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/TrendingNewsAPI?pageNumber=1&pageSize=20&withThumbnails=false&location=us", {
       "method": "GET",
       "headers": {
         "x-rapidapi-key": process.env.REACT_APP_API_KEY,
@@ -42,7 +43,7 @@ console.log('App() newsData: ', newsData);
 
 return (
   <div className="App">
-    <NewsContext.Provider value={newsData} >
+    <NewsContext.Provider value={{newsData, userNews, setUserNews}} >
       <Navigation />
     </NewsContext.Provider>
   </div>
