@@ -249,6 +249,10 @@ img {
   margin: 3px;
 }
 
+.statsChart {
+  max-width: 50vw;
+}
+
 /* 
 
 Background: Neutral #EFEFEF
