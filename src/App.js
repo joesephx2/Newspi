@@ -11,7 +11,6 @@ function App() {
   const [newsData, setState] = useState([])
   const [userNews, setUserNews] = useState([])
 
-
   useEffect(async () => {
 
     await fetch("https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/TrendingNewsAPI?pageNumber=1&pageSize=20&withThumbnails=false&location=us", {
@@ -23,11 +22,10 @@ function App() {
     })
       .then(async (response) => {
         let tmp = await response.json();
-        console.log(tmp)
+        console.log('Received data from fetch:',tmp)
         return tmp;
       })
       .then(resjson => {
-        console.log('resjon', resjson)
         return resjson;
       })
       .then(setState)
@@ -38,9 +36,6 @@ function App() {
     
   }, []);//useEffect
 
-console.log('App() newsData: ', newsData);
-
-
 return (
   <div className="App">
     <NewsContext.Provider value={{newsData, userNews, setUserNews}} >
@@ -49,6 +44,5 @@ return (
   </div>
 );
 };
-
 
 export default App;
