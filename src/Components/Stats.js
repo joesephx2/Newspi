@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import NewsContext from './NewsContext'
 import React from 'react'
 import LineChart from './LineChart'
+import VerticalBar from './VerticalBar'
 
 function Stats() {
 
@@ -22,7 +23,7 @@ function Stats() {
             <h1>Your Reading Stats</h1>
             <p>Articles Completed: {totalCompleted()} </p>
             <div className="statsChart">
-                <LineChart/>
+                <VerticalBar/>
             </div>
         </div>
     )

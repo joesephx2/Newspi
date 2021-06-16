@@ -21,6 +21,7 @@ function ReadingList() {
                     if(news.id === clickedID) {
                         news.completed = true;
                         news.completedTime = Date.now()
+                        console.log('THE TIME IS:', Date.now())
                     }
                     return news;
                 })//tmp.map()

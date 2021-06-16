@@ -46,7 +46,7 @@ function Home() {
 
         function addNews(id = clickedID) {
             let addedTime = Date.now();
-            setUserNews([...userNews, {...newsData.value.filter(news => news.id === id).[0], completed: false, addedTime: addedTime, completedTime: addedTime }]);
+            setUserNews([...userNews, {...newsData.value.filter(news => news.id === id).[0], completed: false, addedTime: addedTime, completedTime: 0 }]);
             console.log('Home() addNews()');
 
             togglePin(id)
