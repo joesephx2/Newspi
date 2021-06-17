@@ -13,7 +13,8 @@ function App() {
 
   useEffect(() => {
 
-    fetch("https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/TrendingNewsAPI?pageNumber=1&pageSize=20&withThumbnails=false&location=us", {
+    fetch("https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/TrendingNewsAPI?pageNumber=1&pageSize=40&withThumbnails=false&location=us", {
+
 
       "method": "GET",
       "headers": {
@@ -24,6 +25,7 @@ function App() {
       .then((response) => {
         let tmp = response.json();
         console.log('Received data from fetch:', tmp)
+
         return tmp;
       })
       .then(resjson => {
@@ -32,6 +34,7 @@ function App() {
       .then(setState)
       .catch(err => {
         console.error(err);
+
       });//fetch
 
     //loading up userNews through
@@ -69,6 +72,7 @@ function App() {
       </NewsContext.Provider>
     </div>
   );
+
 
 };
 
