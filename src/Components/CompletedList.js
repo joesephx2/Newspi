@@ -31,7 +31,7 @@ function CompletedList() {
                         .map(news => {
                             return (
                                 <li onClick={handleClick} id={'li-' + news.id} className="condensedCard">
-                                    <p id={'h1-' + news.id}><b>{news.title}</b></p>
+                                    <p id={'h1-' + news.id}>{news.title}</p>
                                 
                                 </li>
                             )
