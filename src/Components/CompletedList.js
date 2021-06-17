@@ -25,17 +25,14 @@ function CompletedList() {
 
     if (userNews.filter(news => news.completed).length > 0) {
         return (
-            <div className="gridRight newsTitles">
+            <div className="gridRight">
                 <ul>
                     {userNews.filter(news => news.completed)
                         .map(news => {
                             return (
-                                <li onClick={handleClick} id={'li-' + news.id} className="newsCard">
-                                    <img src={news.image.url} id={'img-' + news.id} alt="a pic relevant to the title"></img>
-                                    <h1 id={'h1-' + news.id}>{news.title}
-                                        {/*<img id={"check-" + news.id} src={Check} className="checkMark" alt="a pic to mark as read" />*/}
-                                    </h1>
-                                    <p id={'p-' + news.id}>{news.description}</p>
+                                <li onClick={handleClick} id={'li-' + news.id} className="condensedCard">
+                                    <p id={'h1-' + news.id}><b>{news.title}</b></p>
+                                
                                 </li>
                             )
                         })}

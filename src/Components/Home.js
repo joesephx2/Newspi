@@ -109,8 +109,8 @@ function Home() {
 
     if (newsData.value) {
         return (
-            <div className="gridRight newsTitles">
-                <ul className="flexbox">
+            <div className="gridRight">
+                <ul className="newsTitles">
                     {newsData.value.map(news => {
                         return (
                             <li onClick={handleClick} id={'li-' + news.id} className="newsCard">

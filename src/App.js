@@ -13,7 +13,7 @@ function App() {
 
   useEffect(async () => {
 
-    await fetch("https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/TrendingNewsAPI?pageNumber=1&pageSize=20&withThumbnails=false&location=us", {
+    await fetch("https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/TrendingNewsAPI?pageNumber=1&pageSize=40&withThumbnails=false&location=us", {
       "method": "GET",
       "headers": {
         "x-rapidapi-key": process.env.REACT_APP_API_KEY,

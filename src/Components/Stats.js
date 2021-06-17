@@ -20,9 +20,11 @@ function Stats() {
 
     return (
         <div className="gridRight">
-            <h1>Your Reading Stats</h1>
-            <p>Articles Completed: {totalCompleted()} </p>
-            <div className="statsChart">
+            <div className="roosterBg">
+                <h1>Your Reading Stats</h1>
+                <p>Articles Completed: {totalCompleted()} </p>
+            </div>
+            <div className="roosterBg">
                 <VerticalBar/>
             </div>
         </div>
