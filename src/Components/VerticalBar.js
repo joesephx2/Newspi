@@ -19,23 +19,11 @@ const VerticalBar = () => {
         let duration = lastTime - startTime
         let step = duration / 6
     
-        console.log('startTime:',startTime)
-        console.log('endTime:',lastTime)
-        console.log('duration:', duration)
-        console.log('step:', step)
-
         let second = startTime + step
         let third = second + step
         let fourth = third + step
         let fifth = fourth + step
         let sixth = fifth + step
-
-        console.log('first:', new Date(startTime))
-        console.log('second:', second)
-        console.log('third:', third)
-        console.log('fourth:', fourth)
-        console.log('fifth:', fifth)
-        console.log('sixth',sixth)
 
         let count1 = 0
         let count2 = 0
