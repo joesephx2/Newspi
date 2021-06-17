@@ -144,6 +144,10 @@ img {
   -moz-box-shadow: 5px 5px 5px -3px rgba(118,118,118,0.75);
 }
 
+.condensedCard p {
+  font-weight: bold;
+}
+
 .condensedCard:hover{
   border: solid 1px #A9A9A9 ;
   background-color: #61dafb;
