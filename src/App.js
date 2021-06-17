@@ -11,30 +11,30 @@ function App() {
   const [newsData, setState] = useState([])
   const [userNews, setUserNews] = useState([])
 
-<<<<<<< HEAD
+
   useEffect(() => {
 
     fetch("https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/TrendingNewsAPI?pageNumber=1&pageSize=20&withThumbnails=false&location=us", {
-=======
+
   useEffect(async () => {
 
     await fetch("https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/TrendingNewsAPI?pageNumber=1&pageSize=40&withThumbnails=false&location=us", {
->>>>>>> 17918e649a0d9ba56c0630f49b0a240d8fb4172e
+
       "method": "GET",
       "headers": {
         "x-rapidapi-key": process.env.REACT_APP_API_KEY,
         "x-rapidapi-host": "contextualwebsearch-websearch-v1.p.rapidapi.com"
       }
     })
-<<<<<<< HEAD
+
       .then((response) => {
         let tmp = response.json();
         console.log('Received data from fetch:', tmp)
-=======
+
       .then(async (response) => {
         let tmp = await response.json();
         console.log('Received data from fetch:',tmp)
->>>>>>> 17918e649a0d9ba56c0630f49b0a240d8fb4172e
+
         return tmp;
       })
       .then(resjson => {
@@ -43,7 +43,7 @@ function App() {
       .then(setState)
       .catch(err => {
         console.error(err);
-<<<<<<< HEAD
+
       });//fetch
 
       //loading up userNews through
@@ -81,7 +81,7 @@ function App() {
       </NewsContext.Provider>
     </div>
   );
-=======
+
       });//fetch    
 
     
@@ -94,7 +94,7 @@ return (
     </NewsContext.Provider>
   </div>
 );
->>>>>>> 17918e649a0d9ba56c0630f49b0a240d8fb4172e
+
 };
 
 export default App;
