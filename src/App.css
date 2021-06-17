@@ -101,7 +101,6 @@ img {
   background-color: #fdfdfd;
   border-radius: 5px;
   margin: .5em;
-  padding: 1em;
   box-shadow: 5px 5px 5px -3px rgba(118,118,118,0.75);
   -webkit-box-shadow: 5px 5px 5px -3px rgba(118,118,118,0.75);
   -moz-box-shadow: 5px 5px 5px -3px rgba(118,118,118,0.75);
@@ -113,7 +112,6 @@ img {
   color: #282c34;
   border-radius: 5px;
   margin: .5em;
-  padding: 1em;
   box-shadow: 5px 5px 5px -3px rgba(118,118,118,0.75);
   -webkit-box-shadow: 5px 5px 5px -3px rgba(118,118,118,0.75);
   -moz-box-shadow: 5px 5px 5px -3px rgba(118,118,118,0.75);
@@ -166,8 +164,7 @@ img {
 }
 
 .newsCard img{
-  max-width: 30%;
-  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   order: -1;
   flex-basis: 30%;
 }
