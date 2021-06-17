@@ -46,7 +46,7 @@ function Home() {
 
         function addNews(id = clickedID) {
             let addedTime = Date.now();
-            setUserNews([...userNews, {...newsData.value.filter(news => news.id === id).[0], completed: false, addedTime: addedTime, completedTime: addedTime }]);
+            setUserNews([...userNews, {...newsData.value.filter(news => news.id === id).[0], completed: false, addedTime: addedTime, completedTime: 0 }]);
             console.log('Home() addNews()');
 
             togglePin(id)
@@ -109,8 +109,8 @@ function Home() {
 
     if (newsData.value) {
         return (
-            <div className="gridRight newsTitles">
-                <ul className="flexbox">
+            <div className="gridRight">
+                <ul className="newsTitles">
                     {newsData.value.map(news => {
                         return (
                             <li onClick={handleClick} id={'li-' + news.id} className="newsCard">

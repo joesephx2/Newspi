@@ -21,6 +21,7 @@ function ReadingList() {
                     if(news.id === clickedID) {
                         news.completed = true;
                         news.completedTime = Date.now()
+                        console.log('THE TIME IS:', Date.now())
                     }
                     return news;
                 })//tmp.map()
@@ -48,13 +49,13 @@ function ReadingList() {
                         {userNews.filter(news => !news.completed)                                                      
                         .map(news => {
                             return (
-                                <li onClick={handleClick} id={'li-' + news.id} className="newsCard">
+                                <li onClick={handleClick} id={'li-' + news.id} className="largeCard">
                                     <img src={news.image.url} id={'img-' + news.id} alt="a pic relevant to the title"></img>
+                                    <p id={'p-' + news.id}>{news.description}</p>
                                     <h1 id={'h1-' + news.id}>{news.title} 
                                         <img id={"check-" + news.id} src={Check} className="checkMark" alt="a pic to mark as read" />
                                         <img id={"close-" + news.id} src={Close} className="close" alt="a pic to remove article from reading list" />
                                     </h1>
-                                    <p id={'p-' + news.id}>{news.description}</p>
                                 </li>
                             )
                         })}
