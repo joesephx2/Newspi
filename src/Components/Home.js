@@ -109,11 +109,11 @@ function Home() {
 
     if (newsData.value) {
         return (
-            <div className="gridRight">
-                <ul className="newsTitles">
+            <div className="gridRight" data-testid="test-gridRight">
+                <ul className="newsTitles" data-testid="test-newsGrid">
                     {newsData.value.map(news => {
                         return (
-                            <li onClick={handleClick} id={'li-' + news.id} className="newsCard">
+                            <li onClick={handleClick} data-testid="test-newscard" id={'li-' + news.id} className="newsCard">
                                 <img src={news.image.url} id={'img-' + news.id} alt="a pic relevant to the title"></img>
                                 <p id={'p-' + news.id}>{news.title} <img id={"pin-" + news.id} src={Pin} className={setPin(news.id)} alt="a pin to save article" /> </p>
                                 {/* <p id={'p-' + news.id}>{news.description}</p> */}
@@ -125,7 +125,7 @@ function Home() {
         )
     }
     else {
-        return <h1 className="gridRight">Loading</h1>
+        return <h1 className="gridRight" data-testid="test-loading">Loading</h1>
     }
 
 
